@@ -34,21 +34,14 @@ API_URL = getenv("API_URL", 'https://pytdbotapi.thequickearn.xyz') #youtube song
 VIDEO_API_URL = getenv("VIDEO_API_URL", 'https://api.video.thequickearn.xyz')
 API_KEY = getenv("API_KEY", '30DxNexGenBots5b0475') # youtube song api key, generate free key or buy paid plan from panel.thequickearn.xyz
 
-from os import getenv
-
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/SourabhProfessor/MusicBot"
+    "https://github.com/SourabhProfessor/MusicBot",
 )
-
-UPSTREAM_BRANCH = getenv(
-    "UPSTREAM_BRANCH",
-    "main"
-)
-
-# DO NOT PUT TOKEN HERE
-# Token sirf Heroku Config Vars me jayega
-GIT_TOKEN = getenv("GIT_TOKEN")  # Leave this like this only
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+GIT_TOKEN = getenv(
+    "GIT_TOKEN", None
+)  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/LearnToProfessor")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/DiscussToProfessor")
@@ -128,6 +121,7 @@ if SUPPORT_GROUP:
         raise SystemExit(
             "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
         )
+
 
 
 
