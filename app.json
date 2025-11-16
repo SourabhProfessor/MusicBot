@@ -66,6 +66,16 @@
 
       },
 
+      "API_KEY": {
+
+        "description": "Get your paid api key from @SourabhProfessor",
+
+        "value": "",
+
+        "required": true
+
+      },
+
       "OWNER_ID": {
 
         "description": "The user id of user whom you would like to add as OWNER.",
